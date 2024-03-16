@@ -11,6 +11,7 @@ using PrettyDataFrames
 ```
 
 ## Acknowledgements
-Based on Rafael Guerras post
+Uses the [PrettyTables](https://github.com/ronisbr/PrettyTables.jl) package and
+is based on Rafael Guerras post
 https://discourse.julialang.org/t/is-there-a-better-way-to-format-each-individual-columns-in-a-dataframe/111677/3
 
