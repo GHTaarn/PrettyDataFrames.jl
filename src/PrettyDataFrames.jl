@@ -14,11 +14,16 @@ end
 """
     PrettyDataFrame(df::AbstractDataFrame, fmt...)
 
+A wrapper for a `DataFrame` with custom formatting of each column.
+The wrapped `DataFrame` itself can be accessed through the `df` field.
+
 # Example
 ```julia
 using DataFrames, PrettyDataFrames
 
-PrettyDataFrame(DataFrame(a=rand(4), b=rand(4), c=rand(4)), :a => "%e", :b => "%9.1f")
+x=PrettyDataFrame(DataFrame(a=rand(6), b=rand(6), c=1:6), :a => "%e", :b => "%9.1f")
+filter!(:c => >(2), x.df)
+display(x)
 ```
 """
 function PrettyDataFrame(df::AbstractDataFrame, fmt...)
